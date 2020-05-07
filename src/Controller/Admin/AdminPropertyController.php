@@ -8,8 +8,9 @@ use App\Repository\PropertyRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
+
 
 class AdminPropertyController extends AbstractController
 {
@@ -70,6 +71,9 @@ class AdminPropertyController extends AbstractController
      */
     public function edit(Property $property, Request $request)
     {
+        /* $option = new Option;
+        $property->addOption($option); */
+
         $form = $this->createForm(PropertyType::class, $property);
         $form->handleRequest($request);
 
