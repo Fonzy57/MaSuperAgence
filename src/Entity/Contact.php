@@ -185,7 +185,7 @@ class Contact
      *
      * @param  Property|null  $property
      *
-     * @return  self
+     * @return  Contact
      */ 
     public function setProperty($property)
     {
